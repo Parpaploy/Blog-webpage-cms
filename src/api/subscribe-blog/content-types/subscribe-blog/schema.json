@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subscribe_blogs",
+  "info": {
+    "singularName": "subscribe-blog",
+    "pluralName": "subscribe-blogs",
+    "displayName": "Subscribe Blog"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text",
+      "maxLength": 200,
+      "required": true
+    },
+    "thumbnail": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "detail": {
+      "type": "blocks"
+    }
+  }
+}
