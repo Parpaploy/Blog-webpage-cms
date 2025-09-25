@@ -10,11 +10,15 @@ export default ({ env }) => {
         user: env('DATABASE_USERNAME', 'strapi'),
         password: env('DATABASE_PASSWORD', 'strapi'),
         ssl: env.bool('DATABASE_SSL', false)
-          ? { 
-              rejectUnauthorized: false 
-            }
-          : undefined,
+        ? {
+            ca: env('DATABASE_SSL_CA'),
+            key: env('DATABASE_SSL_KEY'),
+            cert: env('DATABASE_SSL_CERT'),
+            rejectUnauthorized: true
+          }
+        : undefined
       },
+        
       pool: {
         min: env.int('DATABASE_POOL_MIN', 2),
         max: env.int('DATABASE_POOL_MAX', 10),
