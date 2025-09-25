@@ -4,21 +4,20 @@ export default ({ env }) => {
   const connections = {
     mysql: {
       connection: {
-        host: env('DATABASE_HOST', 'localhost'),
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
-        ssl: env.bool('DATABASE_SSL', false)
-        ? {
-            ca: env('DATABASE_SSL_CA'),
-            key: env('DATABASE_SSL_KEY'),
-            cert: env('DATABASE_SSL_CERT'),
-            rejectUnauthorized: true
-          }
-        : undefined
+        host: env('DATABASE_HOST'),
+        port: env.int('DATABASE_PORT'),
+        database: env('DATABASE_NAME'),
+        user: env('DATABASE_USERNAME'),
+        password: env('DATABASE_PASSWORD'),
+        ssl: env.bool('DATABASE_SSL', true)
+            ? {
+                // ca: env('DATABASE_SSL_CA'),
+                // key: env('DATABASE_SSL_KEY'),
+                // cert: env('DATABASE_SSL_CERT'),
+                rejectUnauthorized: true,
+              }
+            : undefined,
       },
-        
       pool: {
         min: env.int('DATABASE_POOL_MIN', 2),
         max: env.int('DATABASE_POOL_MAX', 10),
