@@ -521,6 +521,7 @@ export interface ApiSubscribeBlogSubscribeBlog
       'api::subscribe-blog.subscribe-blog'
     > &
       Schema.Attribute.Private;
+    price: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     thumbnail: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;

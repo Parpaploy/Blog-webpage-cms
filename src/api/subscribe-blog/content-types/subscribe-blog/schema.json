@@ -43,6 +43,9 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "subscribe_blogs"
+    },
+    "price": {
+      "type": "string"
     }
   }
 }
