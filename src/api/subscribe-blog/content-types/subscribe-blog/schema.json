@@ -29,9 +29,6 @@
         "files"
       ]
     },
-    "detail": {
-      "type": "blocks"
-    },
     "author": {
       "type": "relation",
       "relation": "manyToOne",
@@ -46,6 +43,9 @@
     },
     "price": {
       "type": "string"
+    },
+    "detail": {
+      "type": "json"
     }
   }
 }

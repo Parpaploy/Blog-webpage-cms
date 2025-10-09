@@ -26,9 +26,6 @@
         "audios"
       ]
     },
-    "detail": {
-      "type": "blocks"
-    },
     "description": {
       "type": "text",
       "maxLength": 200,
@@ -45,6 +42,9 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "blogs"
+    },
+    "detail": {
+      "type": "json"
     }
   }
 }
