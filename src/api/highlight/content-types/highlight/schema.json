@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "highlights",
+  "info": {
+    "singularName": "highlight",
+    "pluralName": "highlights",
+    "displayName": "Highlight"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::blog.blog"
+    },
+    "subscribe_blogs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::subscribe-blog.subscribe-blog"
+    }
+  }
+}
